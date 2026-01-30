@@ -18,6 +18,8 @@ package() {
 	cd $srcdir
 	cd opt/brother/Printers/mfcl8390cdw
 	find . -type f -exec perl -i -pe 's#/etc/init.d#/etc/rc.d#g; s#printcap\.local#printcap#g' {} +
+	
+	find . -type f -exec perl -i -pe 's#\$LPDCONFIGEXE\=\"brprintconf_\"#\$LPDCONFIGEXE\=\$basedir.\"lpd/brprintconf_"#g' {} +
 
 	cp -rf $srcdir/opt/ $pkgdir/
 
