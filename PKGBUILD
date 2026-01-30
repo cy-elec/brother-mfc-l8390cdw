@@ -20,4 +20,7 @@ package() {
 	find . -type f -exec perl -i -pe 's#/etc/init.d#/etc/rc.d#g; s#printcap\.local#printcap#g' {} +
 
 	cp -rf $srcdir/opt/ $pkgdir/
+
+	ln -s ${CARCH}/brmfcl8390cdwfilter ${pkgdir}/opt/brother/Printers/mfcl8390cdw/lpd/brmfcl8390cdwfilter
+  	ln -s ${CARCH}/brprintconf_mfcl8390cdw ${pkgdir}/opt/brother/Printers/mfcl8390cdw/lpd/brprintconf_mfcl8390cdw
 }
