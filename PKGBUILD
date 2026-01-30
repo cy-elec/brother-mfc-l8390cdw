@@ -1,6 +1,6 @@
 # Maintainer: Felix Kröhnert <kroehnert@cy-core.de>
 pkgname=brother-mfc-l8390cdw
-pkgver=3.5.1-1
+pkgver=3.5.1
 pkgrel=1
 pkgdesc="LPR and CUPS drivers for Brother MFC-L8390CDW"
 arch=('i686' 'x86_64')
